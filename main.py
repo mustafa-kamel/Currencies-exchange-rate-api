@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import datetime
 import requests
-import mydbhandle
+import ratedbhandle
 
 url = "https://api.frankfurter.app"
 
