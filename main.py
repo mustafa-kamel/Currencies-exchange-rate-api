@@ -16,7 +16,7 @@ app = FastAPI()
 # Initialize the get_rate funcion when a getting a GET request on /rate
 @app.get('/rate')
 async def get_rate(from_currency: str, to_currency: str, date: datetime.date):
-    # Convert the currencies to upper case before using it
+    # Converting the passed currencies to upper case before using them
     from_currency = from_currency.upper()
     to_currency = to_currency.upper()
 
