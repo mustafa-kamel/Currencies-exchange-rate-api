@@ -4,6 +4,8 @@ import datetime
 import requests
 import mydbhandle
 
+url = "https://api.frankfurter.app"
+
 # Defining a class for the Rate model
 class Rate(BaseModel):
     from_currency: str
@@ -21,7 +23,7 @@ async def get_rate(from_currency: str, to_currency: str, date: datetime.date):
     to_currency = to_currency.upper()
 
     # Check if the passed curriencies is available
-    currencies_response = requests.get("https://api.frankfurter.app/currencies")
+    currencies_response = requests.get(F"{url}/currencies")
 
     # Parse the json response data
     currencies = currencies_response.json()
@@ -41,7 +43,7 @@ async def get_rate(from_currency: str, to_currency: str, date: datetime.date):
         return {'from_currency': result[1], 'to_currency': result[2], 'date': result[3], 'exchange_rate': result[4]}
 
     # Otherwise make a request to get the rate from the API then save it in the database and return it to the client
-    response = requests.get(F"https://api.frankfurter.app/{date}?from={from_currency}&to={to_currency}")
+    response = requests.get(F"{url}/{date}?from={from_currency}&to={to_currency}")
 
     # Parse the json response data
     data = response.json()
