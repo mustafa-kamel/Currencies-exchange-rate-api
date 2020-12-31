@@ -39,7 +39,8 @@ def create_table(dbname, table_name):
             id serial PRIMARY KEY,
             from_currency varchar(5) NOT NULL,
             to_currency varchar(5) NOT NULL,
-            request_date date NOT NULL
+            request_date date NOT NULL,
+            exchange_rate real NOT NULL
         )
         """
         cursor.execute(create_table_statement)
