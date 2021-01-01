@@ -23,6 +23,7 @@ Installation
 
 Usage
 -----
+To run the API you need to start the server first by navigating to the repo path from cmd/terminal and run this command `uvicorn main:app --reload` then you can visit this url from your browser [API](http://localhost:8000/rate?from_currency=usd&to_currency=eur&date=2021-01-01)
 > You can see the api documentaion on [http://localhost:8000/docs](http://localhost:8000/docs)
 
 The API receives a `GET` request at `/rate/` and expects 3 required parameters to return the exchange rate of the first currency `from_currency` against the second currency `to_currency` on the specefied `date`
@@ -49,6 +50,14 @@ If any of the passed currencies isn't available you will receive a 404 error mes
 > {"detail":"The passed currency NY is not available"}
 
 And if any other error happened you will get an informatic message telling you what happened
+
+
+Testing
+-------
+You can run the test cases using this command `pytest` this will run 3 test cases:
+1. Successful request with response 200
+2. Non existent item with response 404
+3. Absense of one requiered parameter with response 422
 
 
 License
