@@ -18,12 +18,12 @@ Installation
 4. To continue the setup and run the server run `init.bat` for Windows users or `init.sh` for Linux users
 5. You will be asked to enter the credentials for the PostgreSQL server (i.e. `username` and `password`)
 6. Open `ratedbhandle.py` file in any text editor and edit the database credentials to your database `username` and `password`
-7. Now visit the [API] (http://localhost:8000/rate?from_currency=usd&to_currency=eur&date=2021-01-01)
+7. Now visit the [API](http://localhost:8000/rate?from_currency=usd&to_currency=eur&date=2021-01-01)
 
 
 Usage
 -----
-> You can see the api documentaion on [http://localhost:8000/docs] (http://localhost:8000/docs)
+> You can see the api documentaion on [http://localhost:8000/docs](http://localhost:8000/docs)
 
 The API receives a `GET` request at `/rate/` and expects 3 required parameters to return the exchange rate of the first currency `from_currency` against the second currency `to_currency` on the specefied `date`
 
