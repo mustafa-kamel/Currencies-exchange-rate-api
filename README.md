@@ -55,9 +55,9 @@ And if any other error happened you will get an informatic message telling you w
 Testing
 -------
 You can run the test cases using this command `pytest` this will run 3 test cases:
-1. Successful request with response `200`
-2. Non existent item with response `404`
-3. Absense of one requiered parameter with response `422`
+1. Successful request with HTTP response `200`
+2. Non existent item with HTTP response `404`
+3. Absense of one requiered parameter with HTTP response `422`
 
 
 License
