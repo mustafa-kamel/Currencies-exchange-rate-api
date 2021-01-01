@@ -14,30 +14,22 @@ Installation
 ------------
 1. Clone the project `git clone https://github.com/Mustafa-Kamel/Currencies-exchange-rate-api`
 2. Change the active directory to the project directory `cd Currencies-exchange-rate-api`
-3. You can simply setup the project using `setup.bat` for Windows users or `setup.sh` for Linux users
-4. Open `ratedbhandle.py` file in any text editor and edit the database `username` and `password` to your database `username` and `password`
-5. Now visit the [API] (http://localhost:8000/rate?from_currency=usd&to_currency=eur&date=2021-01-01)
-
-> To setup it manually go on with the next setps
+3. Run setup using `setup.bat` for Windows users or `setup.sh` for Linux users
 
 ### Windows
 
-4. Create a virual environment `python -m venv env`
-5. Activate the virtual environment `env\Scripts\activate.bat`
-6. Install the requirements `pip install -r requirements.txt`
-7. Initialize `db_init.py` `3 db_init.py` you will be asked to enter the credentials for the PostgreSQL server (i.e. `username` and `password`)
-8. Open `ratedbhandle.py` file in any text editor and edit the database `username` and `password` to your database `username` and `password`
-9. Return to cmd and create a dump server `uvicorn main:app --reload`
-10. Now visit the [API] (http://localhost:8000/rate?from_currency=usd&to_currency=eur&date=2021-01-01)
+4. Install the requirements `pip install -r requirements.txt`
+5. Initialize the database `python db_init.py` you will be asked to enter the credentials for the PostgreSQL server (i.e. `username` and `password`)
+6. Open `ratedbhandle.py` file in any text editor and edit the database `username` and `password` to your database `username` and `password`
+7. Return to cmd and create a dump server `uvicorn main:app --reload`
+8.  Now visit the [API] (http://localhost:8000/rate?from_currency=usd&to_currency=eur&date=2021-01-01)
 
 ### Linux
-4. Create a virual environment `/usr/bin/python3 -m venv env`
-5. Activate the virtual environment `env/bin/activate`
-6. Install the requirements `env/bin/pip install -r requirements.txt`
-7. Initialize `db_init.py` `/usr/bin/python3 db_init.py` you will be asked to enter the credentials for the PostgreSQL server (i.e. `username` and `password`)
-8. Open `ratedbhandle.py` file in any text editor and edit the database `username` and `password` to your database `username` and `password`
-9. Return to the terminal and create a dump server `uvicorn main:app --reload`
-10. Now visit the [API] (http://localhost:8000/rate?from_currency=usd&to_currency=eur&date=2021-01-01)
+4. Install the requirements `env/bin/pip install -r requirements.txt`
+5. Initialize the database `/usr/bin/python3 db_init.py` you will be asked to enter the credentials for the PostgreSQL server (i.e. `username` and `password`)
+6. Open `ratedbhandle.py` file in any text editor and edit the database `username` and `password` to your database `username` and `password`
+7. Return to the terminal and create a dump server `uvicorn main:app --reload`
+8.  Now visit the [API] (http://localhost:8000/rate?from_currency=usd&to_currency=eur&date=2021-01-01)
 
 
 Usage
