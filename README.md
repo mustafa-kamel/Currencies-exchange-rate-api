@@ -52,17 +52,17 @@ The API receives a `GET` request at `/rate/` and expects 3 required parameters t
 - `date` > `[date]`: The date of the exchange rate
 
 **Request Example:**
-> /rate?from_currency=usd&to_currency=eur&date=2021-01-01
+> */rate?from_currency=usd&to_currency=eur&date=2021-01-01*
 
 ### Response
 The API returns a json object consists of four parameters if both of the currencies are available
-- `from_currency` > `[string]` of 3 characters
-- `to_currency` > `[string]` of 3 characters
+- `from_currency` > *`[string]`* of 3 characters
+- `to_currency` > *`[string]`* of 3 characters
 - `date` > `[date]`: The date of the exchange rate
-- `exchange_rate` > `[float]`
+- `exchange_rate` > *`[float]`*
 
 **Response Example:**
-`{"from_currency":"CNY","to_currency":"ZAR","date":"2019-04-05","exchange_rate":2.0949}`
+*`{"from_currency":"CNY","to_currency":"ZAR","date":"2019-04-05","exchange_rate":2.0949}`*
 
 
 License
