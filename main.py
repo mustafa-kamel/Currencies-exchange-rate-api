@@ -12,11 +12,11 @@ class Rate(BaseModel):
 
 
 # Create a new app instance
-app = FastAPI()
+app = FastAPI(title="Currencies Exchange Rate Api", description="This is a simple service built by FastAPI that provides the exchange rate between the two passed currencies on the passed date")
 
 # Initialize the get_rate funcion when a getting a GET request on /rate
 @app.get('/rate')
-async def get_rate(from_currency: str, to_currency: str, date: datetime.date):
+def get_rate(from_currency: str, to_currency: str, date: datetime.date):
     # Converting the passed currencies to upper case before using them
     from_currency, to_currency = from_currency.upper(), to_currency.upper()
 
