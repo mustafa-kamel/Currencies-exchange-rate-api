@@ -64,6 +64,11 @@ The API returns a json object consists of four parameters if both of the currenc
 **Response Example:**
 *`{"from_currency":"CNY","to_currency":"ZAR","date":"2019-04-05","exchange_rate":2.0949}`*
 
+If any of the passed currencies isn't available you will receive a 404 error message telling you that this currency isn't available
+> {"detail":"The passed currency NY is not available"}
+
+And if any other error happened you will get an informatic message telling you what happened
+
 
 License
 =======
