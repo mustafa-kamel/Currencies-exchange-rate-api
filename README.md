@@ -68,5 +68,5 @@ The API returns a json object consists of four parameters if both of the currenc
 License
 =======
 
-This software is licensed under the `MIT License`. See the ``LICENSE``
+This software is licensed under the `GNU GPL v3.0`. See the ``LICENSE``
 file in the top distribution directory for the full license text.
