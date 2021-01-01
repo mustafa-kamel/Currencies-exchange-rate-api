@@ -5,15 +5,18 @@ from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 connection = ''
 dbname = "currencies"
-
+username = 'postgres'
+password = 'root'
 
 def connect_db():
     global connection
     global dbname
+    global username
+    global password
     # Create a connection to the PostgreSQL
     try:
         connection = psycopg2.connect(
-            host='localhost', user="postgres", password="root", database=dbname)
+            host='localhost', user=username, password=password, database=dbname)
         connection.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
 
         # If the connection succeed return the cursor
