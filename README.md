@@ -15,7 +15,7 @@ Installation
 1. Clone the project `git clone https://github.com/Mustafa-Kamel/Currencies-exchange-rate-api`
 2. Change the active directory to the project directory `cd Currencies-exchange-rate-api`
 3. Run setup using `setup.bat` for Windows users or `setup.sh` for Linux users
-4. To continue the setup and run the server run `init.bat` for Windows users or `init.sh` for Linux users
+4. To complete the setup and run the server run `init.bat` for Windows users or `init.sh` for Linux users
 5. You will be asked to enter the credentials for the PostgreSQL server (i.e. `username` and `password`)
 6. Open `ratedbhandle.py` file in any text editor and edit the database credentials to your database `username` and `password`
 7. Now visit the [API](http://localhost:8000/rate?from_currency=usd&to_currency=eur&date=2021-01-01)
