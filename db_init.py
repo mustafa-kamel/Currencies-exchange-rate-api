@@ -12,7 +12,7 @@ def create_database(dbname, username, password):
         cursor = connection.cursor()
 
         print(f"Creating the '{dbname}' database")
-        # Create the database with the passed database naem
+        # Create the database with the passed database name
         create_database_statement = F"CREATE DATABASE {dbname}"
         cursor.execute(create_database_statement)
 
