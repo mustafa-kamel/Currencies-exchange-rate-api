@@ -24,7 +24,7 @@ def check_currencies_existence(from_currency, to_currency):
         raise HTTPException(status_code=404, detail=F"The passed currency {to_currency} is not available")
 
 
-# Make a request to get the rate from the api, save it in the database then return in to the user
+# Make a request to get the rate from the api, save it in the database then return it to the user
 def get_and_save_rate(from_currency, to_currency, date):
     response = requests.get(F"{url}/{date}?from={from_currency}&to={to_currency}")
     data = response.json()
